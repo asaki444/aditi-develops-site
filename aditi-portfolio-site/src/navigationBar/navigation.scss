@@ -1,0 +1,37 @@
+
+.home-navigation-bar{
+    background-color: #52CA52;
+    display: flex;
+    height: 35px;
+    text-decoration: none;
+    float:right;
+
+    :active{
+        background-color: #96DADA;
+    }
+
+    .nav-item{
+        margin: 7px 15px;
+
+        
+
+       .nav-text{
+           text-decoration: none;
+           color: #FEFEFE;
+           
+       }
+     
+    }
+
+    
+}
+
+.image-container{
+    float: left;
+
+    img{
+      height:35px;
+      width: 135px;
+      object-fit: cover;
+    }
+}

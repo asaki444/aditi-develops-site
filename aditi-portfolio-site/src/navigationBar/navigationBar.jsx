@@ -1,4 +1,8 @@
 import React from 'react';
+import './navigation.scss';
+import Home from '../home/home';
+import AditiLogo from '../aditi-logo/aditi-logo.png';
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -11,34 +15,34 @@ export default function NavigationBar(){
     return(
      <Router>
          <div>
-         <ul className="home-navigation-bar">
-          <li className="nav-item">
-          <Link to="/"> Home </Link> 
-          </li>
-          <li className="nav-item">
-            <Link to="/about-me"> About Me </Link> 
-          </li>
-      <li className="nav-item">
-        <Link to="/portfolio">Portfolio</Link>
-      </li>
-      <li className="nav-item">
-         <Link to="/community-involvement">Community</Link> 
-      </li>
-    <li className="nav-item ">
-     <Link to="/contact"> Contact Me </Link>
-    </li>
-         </ul>
+           
+             <div className="image-container">
+            <img src={AditiLogo}/>
+          </div>
+         <div className="home-navigation-bar">
+       
+          <div className="nav-item">
+          <Link to="/" className="nav-text"> Home </Link> 
+          </div>
+          <div className="nav-item">
+            <Link to="/about-me" className="nav-text"> About Me </Link> 
+          </div>
+      <div className="nav-item">
+        <Link to="/portfolio" className="nav-text">Portfolio</Link>
+      </div>
+      <div className="nav-item">
+         <Link to="/community-involvement" className="nav-text">Community</Link> 
+      </div>
+    <div className="nav-item ">
+     <Link to="/contact" className="nav-text" > Contact Me </Link>
+    </div>
+         </div>
          </div>
 <Switch>
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/dashboard">
-            <Dashboard />
-          </Route>
+     
         </Switch>
      </Router>
     )
