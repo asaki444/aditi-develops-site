@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 .App {
-  text-align: center;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.2;
   background: #258484;
@@ -24,4 +23,12 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.vertical-center{
+  margin:0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
