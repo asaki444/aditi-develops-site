@@ -35,3 +35,50 @@
       object-fit: cover;
     }
 }
+
+.mobile-navigation-bars{
+    display:none;
+}
+
+@media only screen and (max-width: 480px) {
+    .home-navigation-bar {
+      display: none;
+    }
+    .image-container{
+    
+        img{
+          height:45px;
+
+        }
+    }
+
+    .show-nav-bar{
+        display: block;
+        height: auto;
+        position: relative;
+        z-index: 1;
+        .nav-item{
+            height: 50px;
+            font-size: 30px;
+            :hover{
+                background-color: #65BBBB;
+            }
+        }
+        
+    }
+    .mobile-navigation-bars{
+      background-color: #52CA52;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height:35px;
+      font-size: 25px;
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size:25px;
+      color: #FEFEFE;
+      z-index: 2;
+    }
+  }

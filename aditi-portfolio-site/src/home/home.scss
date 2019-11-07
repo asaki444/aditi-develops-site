@@ -20,3 +20,9 @@
     margin: 0 auto;
 
 }
+
+@media only screen and (max-width: 480px) {
+    .welcome-text {
+      font-size: 30px;
+    }
+  }
