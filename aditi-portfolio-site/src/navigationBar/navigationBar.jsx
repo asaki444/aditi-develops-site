@@ -53,9 +53,6 @@ render (){
           <NavLink  activeStyle={activeStyle} className="nav-item" to="/portfolio">
             <div to="/portfolio" className="nav-text">Portfolio</div>
           </NavLink>
-          <NavLink activeStyle={activeStyle} className="nav-item" to="/community-involvement">
-            <div className="nav-text">Community</div>
-          </NavLink>
           <NavLink  activeStyle={activeStyle} className="nav-item" to="/contact">
             <div className="nav-text">
               Contact Me
