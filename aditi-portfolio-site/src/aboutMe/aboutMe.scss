@@ -33,6 +33,15 @@
 .stack-title{
   margin-top: 20px;
 }
+
+.stack-icons{
+  margin-top: 30px;
+  font-size: 40px;
+}
+
+.icon{
+    margin-right: 15px;
+}
 .right-side{
     float:right;
     margin-left: 100px;
@@ -43,4 +52,18 @@
         width:212px;
         height:206px;
     }
+}
+
+.profile-icons{
+margin-top: 10px;
+font-size: 30px;
+}
+
+.profile-icon{
+    margin-right: 15px;
+    color: #000 !important;
+}
+
+a{
+    text-decoration: none;
 }
