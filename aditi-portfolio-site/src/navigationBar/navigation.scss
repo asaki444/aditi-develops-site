@@ -58,9 +58,10 @@
         height: auto;
         position: relative;
         z-index: 1;
+        width: 200px;
         .nav-item{
             height: 50px;
-            font-size: 30px;
+            font-size: 20px;
             :hover{
                 background-color: #65BBBB;
             }

@@ -40,6 +40,9 @@ export default function AboutMe (){
                     <img src={profilePic}/>
              </div>
              <div className="profile-icons">
+                 <div className="profile-title">
+                   profile links:
+                 </div>
         <a href="https://www.linkedin.com/in/aditigreen/">   <FaLinkedin className="profile-icon" /> </a>
          <a href="https://twitter.com/AditiGre"> 
          <FaTwitter className="profile-icon" />
