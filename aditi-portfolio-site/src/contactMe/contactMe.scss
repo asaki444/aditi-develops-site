@@ -1,0 +1,43 @@
+.contact-form-section{
+    height: 100vh;
+    width: 100vw;
+    color: #CCF2F2;
+    padding-bottom: 150px;
+}
+
+.contact-form-title{
+    position: absolute;
+    font-size: 40px;
+    padding-top: 100px;
+    margin-left:20px;
+}
+
+form{
+    display:block;
+    width: 40%;
+    padding-top:250px;
+    margin: 0 auto;
+    label{
+        display:block;
+        margin: 10px 0px;
+        font-size:24px;
+    }
+    input{
+        width: 100%;
+        height: 40px;
+    }
+    textarea{
+        width: 100%;
+        height: 100px;
+    }
+
+    button{
+        margin: 25px auto;
+        width: 100%;
+        height: 40px;
+        font-size: 20px;
+        background-color: #77DD77;
+        border: 1px #77DD77;
+        color: #CCF2F2;
+    }
+}

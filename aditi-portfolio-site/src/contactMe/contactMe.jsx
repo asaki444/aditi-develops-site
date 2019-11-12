@@ -1,66 +1,95 @@
 import React from 'react';
-import * as emailjs from 'emailjs-com';
+import './contactMe.scss';
+import emailjs from 'emailjs-com';
 
-
-export default class contactMe extends React.Component {
-    constructor(props) {
-      super(props);
+export default class ContactMe extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {
-       name: '',
-       email: '',
-       message: ''
+      name: '',
+      email: '',
+      message: '',
+      subject: ''
     }
   }
-  
-  handleFormSubmit = ( event ) => {
+
+  handleFormSubmit = (event) => {
     event.preventDefault();
-    const { name, email, subject, message } = this.state;
+    const {name, email, subject, message} = this.state;
 
     let templateParams = {
-        from_name: email,
-        to_name: '<YOUR_EMAIL_ID>',
-        subject: subject,
-        message_html: message,
-       }
-       emailjs.send(
-        'gmail',
-        'portfoliositeform',
-         templateParams,
-        'user_0fj6hOlXvTDeFMVBggTkO'
-       )
-  }
-  
-  handleChange = (param, e) => {
-    this.setState({ [param]: e.target.value })
-  }
-
-  render (){
-
-    return (
-     
-        <>
-
-<form onSubmit={this.handleSubmit}>
-
-<label> Name</label>
-
-<input type="text"id="fname"name="firstname"  onChange={this.handleChange} placeholder="Your name.."/>
-
-<label>Email</label>
-
-<input type="email"id="email"name="email"placeholder="Your email"  onChange={this.handleChange}  />
-
-
-<label>Subject</label>
-
-<textarea id="subject"name="subject"placeholder="Write something.."   onChange={this.handleChange}  ></textarea>
-
-<input type="submit"value="Submit"/>
-
-</form>
-        </>
-  
-        )
+      name,
+      email,
+      subject,
+      message
     }
-  
+    emailjs
+      .sendForm('gmail', 'portfoliositeform', event.target, 'user_0fj6hOlXvTDeFMVBggTkO', templateParams)
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
   }
+
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value })
+  }
+
+  formValid = ()=>{
+    const {name, email, subject, message} = this.state;
+    return name !== "" && email !== "" && subject !== "" && message !== "";
+  }
+
+  render() {
+    const {name, email, subject, message} = this.state;
+    return (
+
+      <div className="contact-form-section">
+        <div className="contact-form-title">
+          Contact Me:
+        </div>
+        <form onSubmit={this.handleSubmit && this.formValid}>
+
+          <label>
+            Name:</label>
+
+          <input
+            type="text"
+            id="fname"
+            name="name"
+            onChange={this.handleChange}
+            value={name}
+            placeholder="Your name.."/>
+
+          <label>Email:</label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={email}
+            placeholder="Your email"
+            onChange={this.handleChange}/>
+
+          <label>Subject:</label>
+
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            onChange={this.handleChange}
+            value={subject}/>
+<label>Message:</label>
+          <textarea ></textarea>
+
+          <button type="submit" id="submit" value="Submit"> Submit </button>
+
+        </form>
+      </div>
+
+    )
+  }
+
+}

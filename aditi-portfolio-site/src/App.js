@@ -7,6 +7,7 @@ import {
 import AboutMe from './aboutMe/aboutMe';
 import Home from './home/home';
 import Portfolio from './portfolio/portfolio';
+import ContactMe from './contactMe/contactMe'; 
 
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
        <Route exact path="/" component={Home}/>  
        <Route exact path="/about-me" component={AboutMe}/>  
        <Route exact path="/portfolio" component={Portfolio} />
+       <Route exact path="/contact" component={ContactMe} />
     </div>
     </Router>
 
