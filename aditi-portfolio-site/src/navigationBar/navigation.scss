@@ -4,7 +4,10 @@
     display: flex;
     height: 35px;
     text-decoration: none;
-    float:right;
+    position: fixed;
+    top: 0;
+    right: 0;
+
 
     .nav-item{
         margin: 7px 15px;
@@ -22,8 +25,14 @@
     
 }
 
+.active{
+  background-color: #96DADA;
+}
+
 .image-container{
-    float: left;
+  position: fixed;
+  top: 0;
+  left: 0;
 
     img{
       height:35px;
@@ -62,9 +71,6 @@
         .nav-item{
             height: 50px;
             font-size: 20px;
-            :hover{
-                background-color: #65BBBB;
-            }
         }
         
     }

@@ -8,7 +8,7 @@ export default function Portfolio (){
 
 
     return(
-        <div className="portfolio-page">
+        <div id="portfolio-page">
              <div className="projects-title">
                 My Projects
              </div>

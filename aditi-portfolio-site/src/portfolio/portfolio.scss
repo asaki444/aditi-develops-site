@@ -1,25 +1,15 @@
-.portfolio-page{
+#portfolio-page{
    background-color: #65BBBB;
    color: #CCF2F2;
    padding-top: 100px;
    z-index: -1;
    height: 100vh;
    width: 100vw;
-   position: absolute;
-}
 
-.projects-title{
-    font-size: 36px;
-    margin-left:20px;
-}
-
-.projects-container{
+   .projects-container{
     display: flex;
     margin: 0;
-    position: absolute;
     top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
     .project{
         margin: 20px;
     }
@@ -35,6 +25,13 @@
       }
   
 }
+}
+
+.projects-title{
+    font-size: 36px;
+    margin-left:20px;
+}
+
 
 @media only screen and (max-width: 480px) {
     .portfolio-page{

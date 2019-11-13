@@ -1,4 +1,4 @@
-.contact-form-section{
+#contact-form-section{
     height: 100vh;
     width: 100vw;
     color: #CCF2F2;
@@ -10,6 +10,8 @@
     font-size: 40px;
     padding-top: 100px;
     margin-left:20px;
+    width:100%;
+    text-align:center;
 }
 
 form{
@@ -39,5 +41,17 @@ form{
         background-color: #77DD77;
         border: 1px #77DD77;
         color: #CCF2F2;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    form{
+        display:block;
+        width: 80%;
+    }
+    .contact-form-title {
+        margin-left: 40px;
+        text-align: left; 
     }
 }

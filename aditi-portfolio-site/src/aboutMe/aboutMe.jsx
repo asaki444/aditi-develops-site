@@ -7,7 +7,7 @@ import { TiHtml5, TiDocumentText } from "react-icons/ti";
 
 export default function AboutMe (){
   return(
-      <div className="about-me-container" >
+      <div id="about-me-container" >
         
          <div className="left-side">
               <div className="about-me-title">

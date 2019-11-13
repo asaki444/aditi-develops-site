@@ -2,8 +2,10 @@ import React from 'react';
 import './navigation.scss';
 import AditiLogo from '../images/aditi-logo.png';
 import {FaBars} from 'react-icons/fa';
-
-import { NavLink} from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+} from 'react-router-dom';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 export default class NavigationBar extends React.Component {
   constructor(props) {
@@ -23,7 +25,7 @@ render (){
     }) 
     }
 
-    const activeStyle = {
+    const active = {
       backgroundColor: '#96DADA'
     }
   
@@ -34,32 +36,34 @@ render (){
         <div className="image-container">
           <img src={AditiLogo}/>
         </div>
-     
+     <Router>
+  
         <div className="mobile-navigation-bars"  onClick={showMobileNav}>
           <FaBars />
         </div>
         <div className={this.state.toggleMobileNav ? "home-navigation-bar show-nav-bar" : "home-navigation-bar" }>
-
-          <NavLink activeStyle={activeStyle} to="/" className="nav-item">
+    
+          <NavLink activeClassName="active" className="nav-item" to="/#home-page">
             <div className="nav-text">
               Home
             </div>
           </NavLink>
-          <NavLink activeStyle={activeStyle} className="nav-item" to="/about-me">
-            <div  className="nav-text">
+          <NavLink activeClassName="active" className="nav-item" to="/#about-me-container">
+            <div className="nav-text">
               About Me
             </div>
           </NavLink>
-          <NavLink  activeStyle={activeStyle} className="nav-item" to="/portfolio">
-            <div to="/portfolio" className="nav-text">Portfolio</div>
+          <NavLink  activeClassName="active"  className="nav-item" to="/#portfolio-page">
+            <div className="nav-text">Portfolio</div>
           </NavLink>
-          <NavLink  activeStyle={activeStyle} className="nav-item" to="/contact">
+          <NavLink activeClassName="active" className="nav-item" to="/#contact-form-section">
             <div className="nav-text">
               Contact Me
             </div> 
           </NavLink>
         </div>
-       
+          
+     </Router>
       </>
 
   )

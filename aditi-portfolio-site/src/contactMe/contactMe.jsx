@@ -23,6 +23,7 @@ export default class ContactMe extends React.Component {
       subject,
       message
     }
+    
     emailjs
       .sendForm('gmail', 'portfoliositeform', event.target, 'user_0fj6hOlXvTDeFMVBggTkO', templateParams)
       .then((result) => {
@@ -45,7 +46,7 @@ export default class ContactMe extends React.Component {
     const {name, email, subject, message} = this.state;
     return (
 
-      <div className="contact-form-section">
+      <div id="contact-form-section">
         <div className="contact-form-title">
           Contact Me:
         </div>
@@ -78,7 +79,7 @@ export default class ContactMe extends React.Component {
             type="text"
             id="subject"
             name="subject"
-            placeholder="Write something.."
+            placeholder="Subject"
             onChange={this.handleChange}
             value={subject}/>
 <label>Message:</label>
