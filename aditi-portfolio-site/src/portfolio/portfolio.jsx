@@ -30,9 +30,7 @@ export default function Portfolio (){
                    <p> Backend: Java</p>
                    <p>Tools: Google Analytics for A/B test</p>
                  </div>
-                 <div className="project">
 
-                 </div>
             </div>
         </div>
      )

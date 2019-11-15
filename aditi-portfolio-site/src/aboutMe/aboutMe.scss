@@ -1,10 +1,9 @@
 #about-me-container{
     background-color: #CCF2F2;
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    height: 80vh;
+
     display:flex;
-    padding-top:35px;
     z-index: -1;
     justify-content: center;
     align-items: center;
@@ -17,7 +16,6 @@
 
 .about-me-title{
     font-size: 40px;
-    padding: 20px 0;
 }
 .about-me-paragraph{
     font-size:20px;
@@ -25,9 +23,9 @@
 .left-side{
     color: #65BBBB;
     float:left;
-    width: 850px;
-    max-width: 100%;
+    width: 60%;
     margin-left: 20px;
+    max-width: 100%;
 }
 .profile-title{
     color: #65BBBB;
@@ -46,7 +44,9 @@
 }
 .right-side{
     float:right;
-    margin-left: 100px;
+    width: 40%;
+    text-align:right;
+    margin-right: 20px;
     
 }
 .profile-img-container{
@@ -77,14 +77,14 @@ a{
 }
 
 @media only screen and (max-width: 480px) {
-    .about-me-container{
-        display: block; 
-        padding: 0px 10px 0 10px;
+    #about-me-container{
+        padding: 0px;
         max-width: 100%;
+        flex-wrap: wrap;
     }
     .about-me-title{
-        margin-top: 50px;
         font-size: 30px;
+        margin: 10px 0px;
     }
     .about-me-paragraph{
         font-size:20px;
@@ -92,8 +92,8 @@ a{
         margin-bottom: 50px;
     }
     .left-side{
-      display: block;
-      padding-bottom: 50px;
+      width: 100%;
+      padding-right: 10px;
     }
     .stack-icons{
         font-size: 30px;
@@ -115,18 +115,16 @@ a{
     }
     .right-side{
         display: block;
-        margin: 0 auto;
-        float:none;
+        width: 100%;
+        margin-left: 20px;
     }  
 
     .profile-icons{
-        padding-top: 50px;
         font-size: 35px;
     }
 
     .profile-img-container{
-        float: right;
-        padding-right: 20px;
+        float: right; 
         img{
             width:150px;
             height:150px;

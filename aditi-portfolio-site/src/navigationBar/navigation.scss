@@ -55,7 +55,7 @@
       display: none;
     }
     .image-container{
-    
+       position: fixed;
         img{
           height:45px;
 
@@ -65,7 +65,6 @@
     .show-nav-bar{
         display: block;
         height: auto;
-        position: relative;
         z-index: 1;
         width: 200px;
         .nav-item{
@@ -78,8 +77,8 @@
       background-color: #52CA52;
       display: block;
       position: absolute;
-      right: 0;
-      top: 0;
+      top: 0px;
+      right:0px;
       height:35px;
       font-size: 25px;
       padding-top: 10px;
