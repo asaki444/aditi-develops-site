@@ -15,7 +15,6 @@ function App() {
        <NavigationBar />
        <Home/>  
        <AboutMe />  
-       <Portfolio />
        <ContactMe />
        <Footer />
     </div>
