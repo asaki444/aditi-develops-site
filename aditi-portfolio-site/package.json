@@ -6,7 +6,7 @@
   "dependencies": {
     "emailjs": "^2.2.0",
     "emailjs-com": "^2.4.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.13.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-fontawesome": "^1.7.1",
